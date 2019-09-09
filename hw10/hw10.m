@@ -8,7 +8,7 @@ len = 10;
 
 % z = [theta; phi]
 obj = @(z) [ z(2); -g/len * sin(z(1))];
-z0 = [0; 3.1];
+z0 = [3.1; 0];
 [t, z] = ode45(@(t, z) obj(z), 0:0.1:100, z0);
 
 theta_sample = z(1:500, 1);
